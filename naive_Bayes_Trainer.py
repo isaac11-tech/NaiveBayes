@@ -34,7 +34,7 @@ class NaiveBayesTrainer:
             for (value, label), count in grouped.items():
                 self.feature_counts[feature][value][label] = count
 
-        # החזרת מופע של NaiveBayesPredictor
+
         return NaiveBayesPredictor(
             class_counts=self.class_counts,
             feature_counts=self.feature_counts,

@@ -11,12 +11,13 @@ class DataCleaning:
         for column  in df.columns:
             # if its number fill with avg of column
             if df [column].dtypes in ['int64', 'float64']:
-                df[column].fillna(df[column].mean(),inplace= True)
+                df[column] = df[column].fillna(df[column].mean())
             # else fill with mode string in the column
             else:
-                df[column].fillna(df[column].mode()[0],inplace=True)
+                df[column] = df[column].fillna(df[column].mode()[0])
 
         return df
+
 
 
 

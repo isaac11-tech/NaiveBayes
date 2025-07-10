@@ -23,7 +23,7 @@ class NaiveBayesPredictor:
 
             probs[label] = prob
 
-        # נרמול
+
         total = sum(probs.values())
         if total > 0:
             for label in probs:

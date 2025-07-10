@@ -1,36 +1,29 @@
 import pandas as pd
 import os
 
+
 class DataLoader:
-    def __init__(self, file_path):
-        self._data = None
-        self.file_path = file_path
 
-    import pandas as pd
-    import os
-
-    def load_file(self,):
-        file_type = os.path.splitext(self.file_path)[1].lower()
+    @staticmethod
+    def load_file(file_path):
+        df = None
+        file_type = os.path.splitext(file_path)[1].lower()
 
         try:
             if file_type == ".csv":
-                self._data = pd.read_csv(self.file_path)
+                df = pd.read_csv(file_path)
             elif file_type in [".xls", ".xlsx"]:
-                self._data = pd.read_excel(self.file_path)
+                df = pd.read_excel(file_path)
             elif file_type == ".json":
-                self._data = pd.read_json(self.file_path)
-            elif file_type == ".sql":
-
-                self._data = pd.read_sql("SELECT * FROM your_table_name", self.connection)
+                df = pd.read_json(file_path)
+         # self.df = pd.read_sql("SELECT * FROM your_table_name", connection)
             else:
                 raise ValueError(f"Unsupported file type: {file_type}")
 
-            print(f"Data loaded successfully. Length: {len(self._data)}")
-            return self._data
+            print(f"Data loaded successfully. Length: {len(df)}")
+            return df
 
         except Exception as e:
             print(f"Error while loading file: {e}")
             return None
 
-    def get_data(self):
-        return self._data
