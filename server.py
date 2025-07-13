@@ -1,11 +1,20 @@
-from fastapi import FastAPI
+from fastapi import FastAPI,HTTPException
 from pydantic import BaseModel
 import uvicorn
-from data_cleaning import
+from pydantic import BaseModel
+from pathlib import Path
+from data_cleaning import DataCleaning
+
 app = FastAPI()
 
+class InitData(BaseModel):
+    data_file: str
+    target_column: str
+
+
+
 @app.get("/")
-def read_root():
+def load_data():
     return {"message": " uvicorn"}
 
 list_users = []
