@@ -1,10 +1,9 @@
 from fastapi import FastAPI,HTTPException
-from model.data_cleaning import DataCleaning
-from model.DataLoader import DataLoader
-from model.naive_Bayes_Trainer import NaiveBayesTrainer
-from model.naive_bayes_predictor import NaiveBayesPredictor
-from models import *
-
+from model_server.data_cleaning import DataCleaning
+from model_server.DataLoader import DataLoader
+from model_server.naive_Bayes_Trainer import NaiveBayesTrainer
+from classifier import NaiveBayesPredictor
+from model_server.models import *
 
 app = FastAPI()
 
@@ -39,5 +38,6 @@ def calculating_probability(data_file,target_column,data_point):
 @app.get("/result")
 def result():
     return calculating_probability( data_manager.data_file,data_manager.target_column, data_manager.data_point)
+
 
 

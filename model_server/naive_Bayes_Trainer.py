@@ -12,6 +12,8 @@ class NaiveBayesTrainer:
         self.labels = set()
         self.target_column = None
 
+
+
     def fit(self, df: pd.DataFrame, target_column: str):
         self.target_column = target_column
         self.total_count = len(df)
@@ -34,10 +36,14 @@ class NaiveBayesTrainer:
             for (value, label), count in grouped.items():
                 self.feature_counts[feature][value][label] = count
 
+        return {
+            "class_counts": self.class_counts,
+            "feature_counts": {k: dict(v) for k, v in self.feature_counts.items()},
+            "feature_values": {k: list(v) for k, v in self.feature_values.items()},
+            "labels": self.labels.tolist()
+        }
 
-        return NaiveBayesPredictor(
-            class_counts=self.class_counts,
-            feature_counts=self.feature_counts,
-            feature_values=self.feature_values,
-            labels=self.labels
-        )
+
+
+
+
