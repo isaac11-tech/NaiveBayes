@@ -16,7 +16,6 @@ class DataLoader:
                 df = pd.read_excel(file_path)
             elif file_type == ".json":
                 df = pd.read_json(file_path)
-         # self.df = pd.read_sql("SELECT * FROM your_table_name", connection)
             else:
                 raise ValueError(f"Unsupported file type: {file_type}")
 
