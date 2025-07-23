@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="614f036b-c3fb-491b-8aa3-5eb9e07e1bbb" name="Changes" comment="this vo1 with all the basic class">
-      <change afterPath="$PROJECT_DIR$/classifier_server/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model_server/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/NaiveBayes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/NaiveBayes.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classifier_server/classifier_management.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classifier_server/server.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/classifier_server/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/classifier_server/classifier.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-side.py" beforeDir="false" afterPath="$PROJECT_DIR$/requests_classifier.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/model_server/data/data.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model_server/naive_Bayes_Trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_server/naive_Bayes_Trainer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/model_server/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requests_classifier.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Dockerfile" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
