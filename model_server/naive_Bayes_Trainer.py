@@ -1,6 +1,6 @@
 import pandas as pd
 from collections import defaultdict
-from classifier import NaiveBayesPredictor
+from classifier_server.classifier import NaiveBayesPredictor
 
 class NaiveBayesTrainer:
 

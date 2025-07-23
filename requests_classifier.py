@@ -6,7 +6,7 @@ import numpy as np
 
 from classifier import NaiveBayesPredictor
 
-data_file = "C:/Users/itzch/NaiveBayes/data.csv"  # input("enter data path ")
+data_file = "model_server/data/data.csv"  # input("enter data path ")
 target_column = "buy_computer"  # input("enter target_column")
 data_point = '{"age_group": "30+", "status": "student"}'  # input("enter data point as JSON like: {age_group: 30+, status: student}")
 try:
